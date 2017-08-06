@@ -1,4 +1,7 @@
-
+li.limit{
+	width: 100%;
+	text-align: center;
+}
 
 label{
 	border: 1px #999 solid;
@@ -9,6 +12,16 @@ label{
 
 .btn{
 	font-size: 14px;
+}
+
+.display-count{
+	margin-top: 10px;
+	float: left;
+}
+
+.dropdown-menu{
+	min-width:50px;
+	text-align: center;
 }
 
 .form-control{
@@ -22,7 +35,9 @@ label{
 	border-radius: 5px;
 }
 
-
+.limit-button{
+	float: none;
+}
 
 .row{
 	border-bottom: 3px solid #777;

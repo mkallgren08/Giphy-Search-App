@@ -61,9 +61,12 @@ $(document).on("click", ".tagSearch", function(event){
 
       var myapiKey = "&api_key=7c98ec4fbf91466d8f0ac9dcbd1200a9"
 
-      var limit = "&limit=10"
+      var limit = $("#limit-value").text()
+      console.log(limit)
+
+      var limitSet = "&limit=" + limit
       
-      var queryURL = apiURL2 + tagInput + myapiKey + limit;
+      var queryURL = apiURL2 + tagInput + myapiKey + limitSet;
 
       $.ajax({
             url: queryURL,
@@ -107,6 +110,12 @@ $(document).on("click", ".gif", function() {
 
     });
 
+$(document).on("click", ".limit", function() {
+      var newLimit = $(this).attr("value");
+      console.log(newLimit);
+      $("#limit-value").html(newLimit);
+
+});
 
 
 
