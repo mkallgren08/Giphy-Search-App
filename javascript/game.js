@@ -57,7 +57,7 @@ $(document).on("click", ".tagSearch", function(event){
        // This sets up the api query
       var apiURL = "http://api.giphy.com/v1/gifs/random?"
                   +"api_key=7c98ec4fbf91466d8f0ac9dcbd1200a9"
-      var apiURL2 = "http://api.giphy.com/v1/gifs/search?" 
+      var apiURL2 = "https://api.giphy.com/v1/gifs/search?" 
 
       var myapiKey = "&api_key=7c98ec4fbf91466d8f0ac9dcbd1200a9"
 
