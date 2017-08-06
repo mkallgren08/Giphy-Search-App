@@ -1,0 +1,49 @@
+
+
+label{
+	border: 1px #999 solid;
+	padding: 3px;
+	border-radius: 3px;
+	text-decoration: underline;
+}
+
+.btn{
+	font-size: 14px;
+}
+
+.form-control{
+	border-top-width: 3px;
+}
+
+.item{
+	float:left;
+	margin: 10px;
+	border: 1px solid #999;
+	border-radius: 5px;
+}
+
+
+
+.row{
+	border-bottom: 3px solid #777;
+	background-color: #ebebeb;
+}
+
+.title{
+	text-align: center;
+}
+
+.tagSearch{
+	font-size: 15px;
+	margin: 5px;
+	border-radius: 10px;
+	color: white;
+	background-color: #845bff;
+}
+
+.tagSearch:hover,
+.tagSearch:focus,
+.tagSearch.focus {
+  color: rgb(240, 240, 240);
+  font-weight: bold;
+  text-decoration: none;
