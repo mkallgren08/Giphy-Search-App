@@ -20,7 +20,7 @@
  }
 
  var tagButtons = ["kitten", "puppy", 
- "hamster", "cockatiel", "baby rat"];
+ "hamster", "cockatiel", "baby rat", "chipmunks"];
 
 function renderButtons() {
 
