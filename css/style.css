@@ -1,43 +1,101 @@
-li.limit{
-	width: 100%;
-	text-align: center;
-}
-
-label{
-	border: 1px #999 solid;
-	padding: 3px;
-	border-radius: 3px;
-	text-decoration: underline;
-}
 
 .btn{
 	font-size: 14px;
 }
 
+.button-bar{
+	background: red; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(-52deg,#0408ff, red); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(-52deg,#0408ff, red); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(-52deg,#0408ff, red); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(-52deg,#0408ff, red); /* Standard syntax */
+}
+
 .display-count{
-	margin-top: 10px;
-	float: left;
+	margin-top: 8px;
+	
+}
+
+.display-instructions{
+	min-width:111px;
+	margin-bottom: 5px;
+	padding: 6px 20px;
+}
+
+.dropdown-group{
+	width: 95%;
+	margin: 0px 5%;
 }
 
 .dropdown-menu{
 	min-width:50px;
 	text-align: center;
+	width: 93%;
+
+	background: #ff6804; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(right top, #c9f5ff, #aa9f97); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom left, #c9f5ff, #aa9f97); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom left, #c9f5ff, #aa9f97); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom left, #c9f5ff, #aa9f97); /* Standard syntax */
 }
 
 .form-control{
 	border-top-width: 3px;
 }
 
+#gif-display{
+	background: red; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(232deg,#0408ff, red); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(232deg,#0408ff, red); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(232deg,#0408ff, red); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(232deg,#0408ff, red); /* Standard syntax */
+}
+
 .item{
 	float:left;
 	margin: 10px;
-	border: 1px solid #999;
+	border: 3px solid #555555;
 	border-radius: 5px;
+	background: #999999;
+}
+
+label{
+	background: red; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(-52deg,yellow, red); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(-52deg,yellow, red); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(-52deg,yellow, red); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(-52deg,yellow, red); /* Standard syntax */
+
+	color: black;
+	display: block;
+	border: 1px #999 solid;
+	padding: 3px;
+	border-radius: 3px;
+	text-decoration: underline;
+	font-size: 16px;
+}
+
+li.limit{
+	width: 100%;
+	text-align: center;
+}
+
+li.limit:hover{
+	color: whitesmoke;
+	font-weight: bold;
+	background: #ff6804; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(right top, #04cdff, #ff6804); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom left, #04cdff, #ff6804); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom left, #04cdff, #ff6804); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom left, #04cdff, #ff6804); /* Standard syntax */
+	border-top: solid 1px black;
 }
 
 .limit-button{
-	float: none;
+	width:85%;
 }
+
+
 
 .row{
 	border-bottom: 3px solid #777;
@@ -49,11 +107,10 @@ label{
 }
 
 .tagSearch{
-	font-size: 15px;
+	font-size: 20px;
 	margin: 5px;
 	border-radius: 10px;
-	color: white;
-	background-color: #845bff;
+	padding: 5px
 }
 
 .tagSearch:hover,
@@ -62,3 +119,19 @@ label{
   color: rgb(240, 240, 240);
   font-weight: bold;
   text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1097px){
+	.display-instructions{
+		margin: auto 0px;
+	}
+
+	.make-new-button{
+		width: 150px;
+		padding: 3px 12px;
+	}
+
+	#new-tag{
+		width: 100%;
+	}
+}
