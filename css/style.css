@@ -1,3 +1,6 @@
+h6{
+	font-weight: bold;
+}
 
 .btn{
 	font-size: 14px;
@@ -22,9 +25,12 @@
 	padding: 6px 20px;
 }
 
+
+
 .dropdown-group{
 	width: 95%;
-	margin: 0px 5%;
+	margin: 0px 6%;
+	min-width: 168px;
 }
 
 .dropdown-menu{
@@ -102,6 +108,10 @@ li.limit:hover{
 	background-color: #ebebeb;
 }
 
+#search-buttons{
+	margin-top: 3px;
+}
+
 .title{
 	text-align: center;
 }
@@ -121,9 +131,119 @@ li.limit:hover{
   text-decoration: none;
 }
 
+.toggle-old-results{
+	padding: 0px;
+}
+
+/* ======================================== */
+/* SLIDER FUNCTIONALITY */
+/* ======================================== */
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 90px;
+	height: 46px;
+	min-width:52px;
+	margin-top: 10px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {display:none;}
+  
+  /* The slider */
+  .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  .slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 27px;
+	left: 3px;
+	bottom: 2px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  input:checked + .slider {
+	background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+	box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+	-webkit-transform: translateX(44px);
+	-ms-transform: translateX(44px);
+	transform: translateX(44px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+	border-radius: 34px;
+	height: 34px;
+	width: 80px;
+	margin: 6px 5px;
+	border: 2px solid #444444;
+  }
+  
+  .slider.round:before {
+	border-radius: 50%;
+	border: solid 1px black;
+  }
+
+  .display-instructions.toggle-switch{
+	  min-width: 138px;
+	  margin-top: 8px;
+  }
+
+  .toggle-state-all{
+	  display: inline-block;
+	  margin-left: 22px;
+  }
+
+  .toggle-state-new{
+	display: inline-block;
+	margin-left: 5px;
+}
+
+/* ======================================== */
+/* Media Responsiveness */
+/* ======================================== */
+
 @media only screen and (min-width: 768px) and (max-width: 1097px){
 	.display-instructions{
 		margin: auto 0px;
+	}
+
+	.display-instructions.toggle-switch{
+		margin: auto 0px;
+		margin-top: 11px; 
+	}
+
+	
+
+	.display-instructions.display-num{
+		margin-top:5px;
+	}
+
+	.dropdown-group{
+		width: 100%;
+		margin: 10px 0%;
+		min-width: 168px;
 	}
 
 	.make-new-button{
@@ -133,5 +253,6 @@ li.limit:hover{
 
 	#new-tag{
 		width: 100%;
+		margin: 10px 0px
 	}
 }

@@ -72,6 +72,11 @@ function renderButtons() {
 
 $(document).on("click", ".tagSearch", function (event) {
   event.preventDefault();
+
+  if ($("#new-gif-toggle").is(":checked")){
+    console.log("It was checked!")
+    $("#gif-display").empty();
+  }
   // alert("click");
   var tagInput = "q=" + $(this).attr("data-name");
   console.log(tagInput);
