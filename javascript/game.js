@@ -19,7 +19,6 @@ $(".make-new-button").submit("click", function (event) {
     setTimeout(setsearchText, 1500);
   } else {
     var TagText = $("#new-tag").val().trim()
-    this.reset()
     console.log("New button will read: " + TagText)
     tagButtons.push(TagText)
     console.log(tagButtons);
@@ -33,8 +32,8 @@ function setsearchText() {
   $("#new-tag").attr("placeholder", "Tag Search")
 }
 
-var tagButtons = ["kitten", "puppy",
-  "hamster", "cockatiel", "baby rat", "chipmunks"];
+var tagButtons = ["Kitten", "Puppy",
+  "Hamster", "Cockatiel", "Baby Rats", "Chipmunk"];
 
 function renderButtons() {
 
@@ -46,6 +45,8 @@ function renderButtons() {
   for (var i = 0; i < tagButtons.length; i++) {
     // Then dynamicaly generating buttons for each tag in the array.
     // This code $("<button>") is all jQuery needs to create the start and end tag. (<button></button>)
+    var buttonBack = $("<div class = backer>");
+
     var a = $("<button>");
     // Adding a class
     a.attr("class", "tagSearch ");
@@ -56,7 +57,8 @@ function renderButtons() {
     // Providing the button's text with a value of the tag at index i
     a.text(tagButtons[i]);
     // Adding the button to the HTML
-    $("#search-buttons").append(a);
+    buttonBack.append(a)
+    $("#search-buttons").append(buttonBack);
     if (i === j) {
       j = j +3;
       counter++
@@ -78,7 +80,8 @@ $(document).on("click", ".tagSearch", function (event) {
     $("#gif-display").empty();
   }
   // alert("click");
-  var tagInput = "q=" + $(this).attr("data-name");
+  let searchTerm = $(this).attr("data-name")
+  var tagInput = "q=" + searchTerm;
   console.log(tagInput);
   var rating = "&rating=" + "g" + "&rating=" + "pg"
     + "&rating=" + "pg-13"
@@ -96,12 +99,20 @@ $(document).on("click", ".tagSearch", function (event) {
 
   var queryURL = apiURL2 + tagInput + myapiKey + limitSet;
 
+  // this makes the AJAX call
   $.ajax({
     url: queryURL,
     method: "GET"
   }).done(function (response) {
     console.log(response);
     var results = response.data;
+
+    // creates a wrapper to seperate the gif results
+    var gifWrap = $("<div class=gifWrap>");
+    // creates a title for each gif wrapper based on the button clicked
+    var title = $("<h1 class= sectionTitle>")
+    title.text(searchTerm)
+    gifWrap.prepend(title);
 
     for (var i = 0; i < results.length; i++) {
       var gifDiv = $("<div class='item'>");
@@ -119,8 +130,14 @@ $(document).on("click", ".tagSearch", function (event) {
       gifDiv.prepend(p);
       gifDiv.prepend(gifImage);
 
-      $("#gif-display").prepend(gifDiv);
+      gifWrap.append(gifDiv);
     }
+
+
+    // finally, add the gif wrapper to the main display box
+    $("#gif-display").prepend(gifWrap);
+
+
   });
 });
 
